@@ -12,7 +12,7 @@ public class ArraySumAvg {
 			for (int j = 0; j < score[j].length; j++) {
 				sum[i] += score[i][j];
 			}
-			avg[i] = sum[i] / score.length;
+			avg[i] = sum[i] / score[i].length;
 
 			System.out.println("ID=" + i + ", 합계=" + sum[i] + ", 평균=" + avg[i]);
 		}
