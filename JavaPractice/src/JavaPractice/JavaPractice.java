@@ -10,7 +10,7 @@ public class JavaPractice {
 		String choose = " ";
 
 		while (choose != "") {
-			System.out.print("연습 문제 번호 선택(1 ~ 10): ");
+			System.out.print("연습 문제 번호 선택(1 ~ 10-1): ");
 			choose = scan.nextLine();
 
 			switch (choose) {
@@ -51,15 +51,18 @@ public class JavaPractice {
 			case "9-1":
 				SumMethod();
 				break;
-			case "10":
-				
+			case "10-1":
+				System.out.println(add(1, 3));
+				System.out.println(subtract(1, 3));
+				System.out.println(multiply(1, 3));
+				System.out.println(divide(1, 3));
 				break;
 			default:
 				System.out.println("종료합니다.");
 				choose = "";
 				scan.close();
 				break;
-			}		
+			}
 		}
 	}
 
@@ -150,7 +153,7 @@ public class JavaPractice {
 			System.out.println(String.format("ID=%d: 합계=%d, 평균=%d", i, sum, sum / score[i].length));
 		}
 	}
-	
+
 	// Practice #8
 	private static void EngChange(String str) {
 		char[] arr = new char[str.length()];
@@ -174,27 +177,27 @@ public class JavaPractice {
 	private static void CaesarCipher(String sentence) {
 		char[] arr = new char[sentence.length()];
 
-	      for (int i = 0; i < sentence.length(); i++) {
-	         arr[i] = sentence.charAt(i);
-	      }
+		for (int i = 0; i < sentence.length(); i++) {
+			arr[i] = sentence.charAt(i);
+		}
 
-	      for (int i = 0; i < arr.length; i++) {
-	         if (arr[i] >= 65 && arr[i] <= 90) {
-	            arr[i] += 3;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] >= 65 && arr[i] <= 90) {
+				arr[i] += 3;
 
-	            if (arr[i] > 90) {
-	               arr[i] -= 25;
-	            }
-	         } else if (arr[i] >= 97 && arr[i] <= 122) {
-	            arr[i] += 3;
-	            
-	            if (arr[i] > 122) {
-	               arr[i] -= 25;
-	            }
-	         }
-	         System.out.print(arr[i]);
-	      }
-	      System.out.println();
+				if (arr[i] > 90) {
+					arr[i] -= 25;
+				}
+			} else if (arr[i] >= 97 && arr[i] <= 122) {
+				arr[i] += 3;
+
+				if (arr[i] > 122) {
+					arr[i] -= 25;
+				}
+			}
+			System.out.print(arr[i]);
+		}
+		System.out.println();
 	}
 
 	// Practice #9-1
@@ -217,7 +220,19 @@ public class JavaPractice {
 	}
 
 	// Practice #10
-	private static void calculator() {
-		
+	private static int add(int x, int y) {
+		return x + y;
+	}
+
+	private static int subtract(int x, int y) {
+		return x - y;
+	}
+
+	private static int multiply(int x, int y) {
+		return x * y;
+	}
+
+	private static double divide(double x, double y) {
+		return x / y;
 	}
 }
