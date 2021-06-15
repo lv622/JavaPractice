@@ -51,6 +51,9 @@ public class JavaPractice {
 			case "9-1":
 				SumMethod();
 				break;
+			case "10":
+				
+				break;
 			case "10-1":
 				System.out.println(add(1, 3));
 				System.out.println(subtract(1, 3));
@@ -217,6 +220,8 @@ public class JavaPractice {
 			System.out.print(String.format("Sum<%c> = %d", list[i], sum[i]));
 			System.out.println();
 		}
+		
+		
 	}
 
 	// Practice #10
